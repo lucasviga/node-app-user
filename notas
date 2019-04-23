@@ -1,0 +1,53 @@
+ - criou uma variavel do tipo const chamado express, que ira importa da 
+biblioteca 'express'.
+
+- crio uma variavel app chamando o metodo express.
+
+:: criando as rotas
+
+uso o app.get, + a rota + os parametros req e res (Requisicao e resposta)
+
+logo apos retorno uma resposta, res, res.send("hello")
+
+chamo minha aplicacao na porta 3000
+
+app.listen(3000)
+========================
+
+app.get("/nome/:name", (req, res) => {
+  return res.send(`Bem Vindo, ${req.params.name}`);
+});
+
+toda vez que eu quero passar o parametro na rota, usar : + nome do parametro (:name)
+
+o req, sempre vai pegar os parametros, cabecalhos e corpo da requisicao
+
+============================
+
+yarn add nodemon -D
+
+-d: instala dependencia somente para o amb de desenvolvimento
+
+app.use(logMiddleware);
+
+todas as rotas da minha aplicacao irao usar o meu middleware
+
+O middleware é um interceptador que pode, ou não, bloquear o fluxo da requisição;
+
+sobre non-blocking I/O
+
+É a capacidade de fazer operações de entrada e saída (acessar sistema de arquivos, banco de dados, rede, servidores, etc.) 
+sem que a aplicação fique impedida de executar outras coisas em paralelo.
+
+nunjucks: faz o template dentro do node
+
+quando for usar estrutura de repeticao no nunjucks:
+
+{% %}
+
+{{user}} : print uma informacoa no template
+
+users.push: adicionar um novo elemento no array
+
+=======================
+fazendo o debug
